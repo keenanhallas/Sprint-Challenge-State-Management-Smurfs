@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { getSmurfs } from "../actions";
-import { SmurfCard } from "./SmurfCard";
+import { getSmurfs, addSmurf } from "../actions";
+import SmurfCard from "./SmurfCard";
 
 const SmurfList = ({smurfs, getSmurfs}) => {
     useEffect(() => {
