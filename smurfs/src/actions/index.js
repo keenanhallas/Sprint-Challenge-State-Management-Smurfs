@@ -9,7 +9,7 @@ export const getSmurfs = () => dispatch => {
             console.log(res);
             dispatch({
                 type: "FETCHING_SMURFS_SUCCESS",
-                payload: res.data.smurfs
+                payload: res.data
             })
         })
         .catch(err => {

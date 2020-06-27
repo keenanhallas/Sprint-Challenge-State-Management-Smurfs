@@ -1,15 +1,18 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { getSmurfs } from "../actions";
+import { SmurfCard } from "./SmurfCard";
 
 const SmurfList = ({smurfs, getSmurfs}) => {
     useEffect(() => {
         getSmurfs();
-    }, [smurfs]);
+        console.log(smurfs);
+    }, []);
 
-    console.log(smurfs);
     return (
-        <h2>This will be a list</h2>
+        smurfs.map((smurf, i) => {
+            return <SmurfCard smurf={smurf} key={i}/>
+        })
     );
 }
 

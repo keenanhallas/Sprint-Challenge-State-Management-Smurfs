@@ -13,7 +13,11 @@ export const smurfsReducer = (state = initialState, action) => {
                 error: ""
             }
         case "FETCHING_SMURFS_SUCCESS":
-            //map over data here and set smurfs
+            return {
+                ...state,
+                isFetching: false,
+                smurfs: action.payload
+            }
         case "FETCHING_SMURFS_FAILURE":
             //set error here
         case "ADD_SMURF":
