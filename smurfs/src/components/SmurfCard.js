@@ -2,7 +2,7 @@ import React from "react";
 import { deleteSmurf } from "../actions";
 import { connect } from "react-redux";
 
-const SmurfCard = ({smurf}) => {
+const SmurfCard = ({smurf, deleteSmurf}) => {
     return (
         <div style={{border: "1px solid black", width: "75%", margin: "0 auto"}}>
             <h3>Name: {smurf.name}</h3>

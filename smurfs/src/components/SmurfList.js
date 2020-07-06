@@ -7,7 +7,7 @@ const SmurfList = ({smurfs, getSmurfs}) => {
     useEffect(() => {
         getSmurfs();
         console.log(smurfs);
-    }, []);
+    }, []); //is there a way to just call getSmurfs when you need the component to update?
 
     return (
         smurfs.map((smurf, i) => {

@@ -41,6 +41,7 @@ export const smurfsReducer = (state = initialState, action) => {
         case "POSTING_SMURF_SUCCESS":
             return {
                 ...state,
+                smurfs: [...state.smurfs, action.payload],
                 isPosting: false,
                 postingError: ""
             }
@@ -59,6 +60,7 @@ export const smurfsReducer = (state = initialState, action) => {
         case "DELETING_SMURF_SUCCESS":
             return {
                 ...state,
+                smurfs: state.smurfs.filter(smurf => smurf.id !== action.payload),
                 isDeleting: false,
                 deletingError: ""
             }

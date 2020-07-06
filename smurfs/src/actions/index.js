@@ -29,7 +29,8 @@ export const addSmurf = smurf => dispatch => {
         .then(res => {
             console.log(res);
             dispatch({
-                type: "POSTING_SMURF_SUCCESS"
+                type: "POSTING_SMURF_SUCCESS",
+                payload: smurf
             })
         })
         .catch(err => {
@@ -49,7 +50,8 @@ export const deleteSmurf = smurf => dispatch => {
         .then(res => {
             console.log(res);
             dispatch({
-                type: "DELETING_SMURF_SUCCESS"
+                type: "DELETING_SMURF_SUCCESS",
+                payload: smurf.id
             })
         })
         .catch(err => {
